@@ -1,0 +1,139 @@
+$mainColor: #2f80e2;
+$transitionTime: 0.5s;
+
+// 重置密码盒子样式
+.reset-box {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: calc(450px - 48px);
+    height: calc(600px - 48px);
+    background-color: white;
+    border-radius: 8px;
+    padding: 24px;
+    z-index: 2;
+
+    // 重置密码盒子顶部
+    .reset-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        top: 24px;
+        width: calc(100% - 48px);
+
+        // 重置密码标题样式
+        .reset-title {
+            font-weight: 100;
+            font-size: 32px;
+            color: black;
+            margin: 0;
+        }
+
+        // 关闭按钮样式
+        .close {
+            font-size: 32px;
+            width: 32px;
+            height: 32px;
+            line-height: 32px;
+            padding: 0;
+            border: none;
+            background-color: transparent;
+            transition: opacity $transitionTime;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+    }
+
+    // 重置密码表单样式
+    .reset-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding-top: 100px;
+
+        :nth-child(n) {
+            margin-bottom: 16px;
+        }
+
+        // 标题样式
+        .reset-title {
+            font-weight: 100;
+            font-size: 24px;
+        }
+
+        // 输入框样式
+        input {
+            width: calc(100% - 40px);
+            height: 50px;
+            padding: 0px 20px;
+            color: black;
+            font-size: 20px;
+            background-color: #ededed;
+            border: 1px solid rgba($color: #FFF, $alpha: 0);
+            border-radius: 6px;
+            transition: border $transitionTime;
+
+            &:focus {
+                border: 1px solid $mainColor;
+            }
+        }
+
+        // 获取验证码块样式
+        .reset-code-pane {
+            display: flex;
+            position: relative;
+            width: 100%;
+
+            // 验证码输入框样式
+            .reset-code {
+                width: 100%;
+                padding-right: 130px;
+            }
+
+            // 验证码按钮样式
+            .reset-code-button {
+                display: block;
+                position: absolute;
+                right: 0px;
+                width: 120px;
+                padding: 0;
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+                transition: color $transitionTime;
+
+                &:hover {
+                    color: $mainColor;
+                }
+
+                &:disabled {
+                    color: rgb(200, 200, 200);
+                    cursor: not-allowed;
+                }
+            }
+        }
+
+        // 重置密码按钮样式
+        .reset-button {
+            padding: 0;
+            width: 100%;
+            color: white;
+            background-color: $mainColor;
+            border: 1px solid $mainColor;
+            cursor: pointer;
+            transition: opacity $transitionTime;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}

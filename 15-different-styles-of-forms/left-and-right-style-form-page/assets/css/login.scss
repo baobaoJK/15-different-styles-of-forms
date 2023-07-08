@@ -1,0 +1,149 @@
+$mainColor: #F48888;
+$transitionTime: 0.5s;
+
+@keyframes background-animation {
+    0% {
+        filter: blur(0px);
+    }
+
+    100% {
+        filter: blur(2px);
+    }
+}
+
+@keyframes login-form {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+html,
+body,
+.main {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    min-width: 1600px;
+    min-height: 800px;
+}
+
+.main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    .background {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: transparent url("../images/background.jpg") no-repeat scroll center;
+        background-size: cover;
+        transform: scale(1.1);
+        filter: blur(2px);
+        animation: background-animation 1s;
+    }
+}
+
+// 登录盒子样式
+.login-box {
+    display: flex;
+    position: relative;
+    width: 1450px;
+    height: 650px;
+    background-color: white;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+    animation: login-form 2s;
+
+    // 登录盒子背景
+    .login-background {
+        content: '';
+        display: block;
+        width: 1100px;
+        height: 100%;
+        background: white url("../images/background.jpg ") no-repeat scroll center;
+        background-size: cover;
+    }
+
+    // 登录表单样式
+    .login-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 350px;
+        height: 100%;
+
+        // 登录标题样式
+        .login-title {
+            position: absolute;
+            top: 100px;
+            font-size: 28px;
+            font-weight: 100;
+            letter-spacing: 1rem;
+            margin-right: -1rem;
+        }
+
+        // 输入框样式
+        input {
+            width: 250px;
+            height: 32px;
+            margin-bottom: 16px;
+            outline: none;
+            border: rgb(242, 242, 242) solid 1px;
+            background-color: rgb(242, 242, 242);
+            border-radius: 2px;
+            text-align: center;
+            transition: border .3s;
+
+            &:focus {
+                border: $mainColor solid 1px;
+            }
+        }
+
+        // 登录按钮样式
+        .login-button {
+            width: 256px;
+            height: 36px;
+            border: $mainColor solid 1px;
+            background-color: $mainColor;
+            color: white;
+            transition: opacity .3s;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+
+        // 链接样式
+        .link {
+            position: absolute;
+            bottom: 50px;
+            width: 240px;
+            font-size: 14px;
+            text-align: left;
+
+            a {
+                outline: none;
+                text-decoration: none;
+                color: $mainColor;
+                transition: opacity .3s;
+
+                &:hover {
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+}

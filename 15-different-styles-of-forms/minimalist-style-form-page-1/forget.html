@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>极简风格表单重置密码页</title>
+    <link rel="stylesheet" href="assets/css/forget.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="forget-box">
+            <h1 class="forget-title">重置密码</h1>
+            <form class="forget-form">
+                <div class="username-box">
+                    <label for="username">用户名</label>
+                    <input type="text" name="username" class="username" id="username" placeholder="请输入用户名"
+                        autocomplete="off">
+                </div>
+                <div class="password-box">
+                    <label for="password">密码</label>
+                    <input type="password" name="password" class="password" id="password" placeholder="请输入密码"
+                        autocomplete="off">
+                </div>
+
+                <div class="phone-box">
+                    <label for="phone">手机号</label>
+                    <input type="text" name="phone" class="phone" id="phone" placeholder="请输入手机号" autocomplete="off">
+                </div>
+
+                <div class="code-box">
+                    <label for="验证码">验证码</label>
+                    <input type="text" name="code" class="code" id="code" placeholder="请输入验证码" autocomplete="off">
+                    <input type="button" value="获取验证码" class="code-button" id="code-button">
+                </div>
+                <input type="submit" value="重置密码" class="reset-button" id="reset-button">
+            </form>
+            <div class="link">
+                <a href="register.html" class="register">注册</a>
+                <a href="login.html" class="login">登录</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/forget.js"></script>
+
+</html>

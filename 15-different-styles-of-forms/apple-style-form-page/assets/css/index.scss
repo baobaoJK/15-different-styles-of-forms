@@ -1,0 +1,86 @@
+$transitionTime: 0.5s;
+
+@keyframes links {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+* {
+    outline: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+html,
+body,
+.main {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent url("../images/background.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+.link {
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+
+    a {
+        padding: 16px 32px;
+        border-radius: 6px;
+        font-size: 32px;
+        color: white;
+        transition: background-color $transitionTime;
+        opacity: 0;
+
+        @for $i from 1 to 4 {
+            &:nth-child(#{$i}) {
+                animation: links 1s;
+                animation-delay: (($i - 1) * 0.5s);
+                animation-fill-mode: forwards;
+
+                @if $i==1 {
+                    background-color: #FF6057;
+
+                    &:hover {
+                        background-color: rgba($color: #FF6057, $alpha: 0.6);
+                    }
+                }
+
+                @if $i==2 {
+                    background-color: #FFBD2E;
+
+                    &:hover {
+                        background-color: rgba($color: #FFBD2E, $alpha: 0.6);
+                    }
+                }
+
+                @if $i==3 {
+                    background-color: #28CA40;
+
+                    &:hover {
+                        background-color: rgba($color: #28CA40, $alpha: 0.6);
+                    }
+                }
+            }
+        }
+    }
+}

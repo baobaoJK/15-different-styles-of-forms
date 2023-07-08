@@ -1,0 +1,92 @@
+$mainColor: #CD1348;
+$transitionTime: 0.5s;
+
+// 注册盒子样式
+.register-box {
+    display: none;
+    position: relative;
+    width: 100%;
+
+    // 注册表单样式
+    .register-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+
+        // 输入框样式
+        input {
+            width: 250px;
+            height: 32px;
+            margin-bottom: 16px;
+            outline: none;
+            border: rgb(242, 242, 242) solid 1px;
+            background-color: rgb(242, 242, 242);
+            border-radius: 2px;
+            text-align: center;
+            transition: border .3s;
+
+            &:focus {
+                border: $mainColor solid 1px;
+            }
+        }
+
+        // 验证码块样式
+        .register-code-pane {
+            display: flex;
+            width: 256px;
+            height: 32px;
+            padding: 1px 0;
+            margin-bottom: 16px;
+            border: rgb(242, 242, 242) solid 1px;
+            background-color: rgb(242, 242, 242);
+            border-radius: 2px;
+            transition: border .3s;
+
+            &:focus-within {
+                border: $mainColor solid 1px;
+            }
+
+            // 验证码输入框样式
+            .register-code {
+                width: 60%;
+                border: none;
+                background-color: transparent;
+            }
+
+            // 验证码发送按钮样式
+            .register-code-button {
+                width: 40%;
+                border: none;
+                background-color: transparent;
+                transition: color .3s;
+                cursor: pointer;
+
+                &:hover {
+                    color: $mainColor;
+                }
+
+                &:disabled {
+                    color: $mainColor;
+                }
+            }
+        }
+
+        // 注册按钮样式
+        .register-button {
+            width: 256px;
+            height: 36px;
+            border: $mainColor solid 1px;
+            background-color: $mainColor;
+            color: white;
+            transition: opacity .3s;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+    }
+}

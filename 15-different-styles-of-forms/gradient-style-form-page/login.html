@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>渐变风格表单登录页面</title>
+    <link rel="stylesheet" href="assets/css/login.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="login-box">
+
+            <div class="left-box">
+                <div class="center-block">
+                    <div class="text">
+                        <h2>今日分享</h2>
+                        <p>很多人不需要再见，因为只是路过而已。</p>
+                        <p>遗忘就是我们给彼此最好的纪念。</p>
+                        <p>——《千与千寻》</p>
+                        <p>&nbsp;</p>
+                        <p>在喜欢上你的时候，已经踏上了旅程。</p>
+                        <p>——《追逐繁星的孩子》</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-box">
+                <form class="login-form">
+                    <div class="login-title">
+                        <h2>欢迎，登录！</h2>
+                        <span>输入用户信息进行登录</span>
+                    </div>
+                    <div class="login-input">
+                        <label>用户名</label>
+                        <input type="text" class="input username" id="username" autocomplete="off">
+                        <label>密码</label>
+                        <input type="password" class="input password" id="password" autocomplete="off">
+                        <div class="options">
+                            <input type="checkbox" class="remember" id="remember">
+                            <label for="remember">
+                                <span class="remember-me">记住我</span>
+                            </label>
+                            <a href="forget.html" class="forget">忘记密码？</a>
+                        </div>
+                        <input type="button" value="登录" class="login-button" id="login-button"></input>
+                    </div>
+                    <div class="divider">
+                        <span class="line"></span>
+                        <span class="divider-text">或者</span>
+                        <span class="line"></span>
+                    </div>
+                    <div class="other-login-wrapper">
+                        <div class="other-login-item">
+                            <img src="assets/images/qq.png" alt="qq.png">
+                            <span>QQ 登录</span>
+                        </div>
+                        <div class="other-login-item">
+                            <img src="assets/images/wechat.png" alt="wechat.png">
+                            <span>WeChat 登录</span>
+                        </div>
+                    </div>
+                    <a href="register.html" class="register">注册账号</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/login.js"></script>
+
+</html>

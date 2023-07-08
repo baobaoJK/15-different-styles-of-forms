@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>苹果风格表单登录页</title>
+    <link rel="stylesheet" href="assets/css/login.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="login-box">
+            <div class="login-top">
+                <div class="window-button">
+                    <button class="hide-button"></button>
+                    <button class="max-button"></button>
+                    <button class="close-button"></button>
+                </div>
+                <h1 class="login-title">用户登录</h1>
+            </div>
+            <div class="login-form-box">
+                <div class="login-avatar">
+                    <img src="assets/images/user.jpg" alt="user.jpg">
+                </div>
+                <form class="login-form">
+                    <input type="text" name="username" class="username" id="username" placeholder="用户名"
+                        autocomplete="off">
+                    <input type="password" name="password" class="password" id="password" placeholder="密码"
+                        autocomplete="off">
+                    <div class="link">
+                        <a href="register.html" class="register">注册</a>
+                        <a href="forget.html" class="forget">忘记密码？</a>
+                    </div>
+                    <input type="submit" value="登录" class="login-button" id="login-button">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/login.js"></script>
+
+</html>

@@ -1,0 +1,176 @@
+$mainColor: #4e48ff;
+$transitionTime: 0.5s;
+
+* {
+    outline: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+html,
+body,
+.main {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent url("../images/login.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+// 登录盒子样式
+.login-box {
+    display: flex;
+    flex-direction: row;
+    width: 1000px;
+    height: 600px;
+    border-radius: 8px;
+    overflow: hidden;
+
+    // 左盒子样式
+    .left-box {
+        width: calc(50% - 64px);
+        height: calc(100% - 64px);
+        background-color: rgba($color: $mainColor, $alpha: 0.5);
+        color: white;
+        padding: 32px;
+
+        // 登录标题样式
+        .login-title {
+            font-weight: 400;
+            font-size: 32px;
+        }
+
+        // 登录副标题样式
+        .login-sub-title {
+            line-height: 32px;
+        }
+    }
+
+    // 右盒子样式
+    .right-box {
+        width: 50%;
+        height: 100%;
+        background-color: white;
+
+        // 登录表单样式
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: calc(100% - 100px);
+            padding-top: 100px;
+
+            :nth-child(n) {
+                margin-bottom: 24px;
+            }
+
+            // 输入框样式
+            input[type="text"],
+            input[type="password"] {
+                width: 400px;
+                height: 50px;
+                font-size: 20px;
+                border: none;
+                border-bottom: 1px solid rgb(200, 200, 200);
+                transition: border $transitionTime;
+
+                &:focus {
+                    border-bottom: 1px solid $mainColor;
+                }
+            }
+
+            // 复选框样式
+            .check-box {
+                display: flex;
+                justify-content: space-between;
+                width: 400px;
+
+                div {
+                    display: flex;
+
+                    // 复选框样式
+                    input[type="checkbox"] {
+                        position: relative;
+                        width: 16px;
+                        height: 16px;
+                        margin-right: 8px;
+                        cursor: pointer;
+
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            width: 13px;
+                            height: 14px;
+                            color: #fff;
+                            background-color: white;
+                            border: 1px solid rgb(118, 118, 118);
+                            padding-left: 3px;
+                            padding-bottom: 2px;
+                            border-radius: 2px;
+                        }
+
+                        &:checked:after {
+                            content: "✔";
+                            font-size: 12px;
+                            background-color: $mainColor;
+                            border: 1px solid $mainColor;
+                        }
+                    }
+                }
+            }
+
+            // 登录按钮样式
+            .login-button {
+                width: 200px;
+                height: 50px;
+                color: white;
+                font-size: 18px;
+                background-color: $mainColor;
+                border: 1px solid $mainColor;
+                border-radius: 4px;
+                cursor: pointer;
+                transform: translateX(100px);
+                transition: opacity $transitionTime;
+
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+
+            // 链接块样式
+            .link {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                width: 100%;
+                padding-right: 100px;
+
+                p {
+                    margin: 0;
+                    margin-bottom: 8px;
+
+                    a {
+                        color: $mainColor;
+                        transition: opacity $transitionTime;
+
+                        &:hover {
+                            opacity: 0.5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

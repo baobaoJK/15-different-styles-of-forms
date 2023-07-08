@@ -1,0 +1,167 @@
+$mainColor: #8FA849;
+$transitionTime: 0.5s;
+
+* {
+    outline: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+html,
+body,
+.main {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent url("../images/background.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+// 重置密码盒子样式
+.forget-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 700px;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    border-radius: 8px;
+    box-shadow: 0px 0px 8px black;
+
+    // 重置密码标题样式
+    .forget-title {
+        font-weight: 100;
+        font-size: 42px;
+        color: white;
+        letter-spacing: 1rem;
+        margin-right: -1rem;
+    }
+
+    // 重置密码表单样式
+    .forget-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        :nth-child(n) {
+            margin-bottom: 12px;
+        }
+
+        // 用户输入框盒子样式
+        .username-box,
+        .password-box,
+        .phone-box,
+        .code-box {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            color: white;
+
+            label {
+                font-size: 24px;
+                margin-bottom: 8px;
+            }
+        }
+
+        // 验证码输入框盒子样式
+        .code-box {
+            position: relative;
+
+            // 验证码输入框样式
+            .code {
+                width: calc(100% - 190px);
+                padding-right: 170px;
+            }
+
+            // 验证码按钮样式
+            .code-button {
+                display: block;
+                position: absolute;
+                top: 40px;
+                right: 0px;
+                width: 120px;
+                padding: 0;
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+                transition: color $transitionTime;
+
+                &:hover {
+                    color: $mainColor;
+                }
+
+                &:disabled {
+                    color: rgb(200, 200, 200);
+                    cursor: not-allowed;
+                }
+            }
+        }
+
+        // 输入框样式
+        input {
+            width: calc(100% - 40px);
+            height: 50px;
+            padding: 0px 20px;
+            color: white;
+            font-size: 20px;
+            background-color: rgba($color: #FFF, $alpha: 0.5);
+            border: 1px solid rgba($color: #FFF, $alpha: 0);
+            border-radius: 6px;
+            transition: border $transitionTime;
+
+            &:focus {
+                border: 1px solid $mainColor;
+            }
+
+            &::placeholder {
+                color: rgba($color: #FFF, $alpha: 0.8);
+            }
+        }
+
+        // 链接块样式
+        .link {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+
+            a {
+                color: white;
+                font-size: 24px;
+                transition: color $transitionTime;
+
+                &:hover {
+                    color: $mainColor;
+                }
+            }
+        }
+
+        // 重置密码按钮样式
+        .reset-button {
+            padding: 0;
+            width: calc(80% + 2px);
+            color: white;
+            background-color: $mainColor;
+            border: 1px solid $mainColor;
+            cursor: pointer;
+            transform: translateX(1px);
+            transition: opacity $transitionTime;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}

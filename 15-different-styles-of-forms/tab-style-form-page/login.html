@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>左右滑动风格表单登录页</title>
+    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/register.css">
+    <link rel="stylesheet" href="assets/css/forget.css">
+</head>
+
+<body>
+    <div class="main">
+
+        <div class="form-box">
+            <div class="form-top">
+                <button class="login active">登录</button>
+                <button class="register">注册</button>
+                <button class="forget">重置密码</button>
+            </div>
+            <div class="form-block">
+                <div class="login-box">
+                    <form class="login-form">
+                        <div class="login-input input">
+                            <label for="login-username">用户名</label>
+                            <input type="text" name="login-username" class="login-username" id="login-username"
+                                placeholder="用户名" autocomplete="off">
+                        </div>
+                        <div class="login-input input">
+                            <label for="login-password">密码</label>
+                            <input type="password" name="login-password" class="login-password" id="login-password"
+                                placeholder="密码" autocomplete="off">
+                        </div>
+
+                        <input type="submit" value="登录" class="login-button" id="login-button">
+                    </form>
+                </div>
+
+                <div class="register-box">
+                    <form class="register-form">
+                        <div class="register-input input">
+                            <label for="register-username">用户名</label>
+                            <input type="text" name="register-username" class="register-username" id="register-username"
+                                placeholder="请输入用户名" autocomplete="off">
+                        </div>
+                        <div class="register-input input">
+                            <label for="register-password">密码</label>
+                            <input type="password" name="register-password" class="register-password"
+                                id="registerpassword" placeholder="请输入密码" autocomplete="off">
+                        </div>
+                        <div class="register-input input">
+                            <label for="register-phone">手机号</label>
+                            <input type="text" name="register-phone" class="register-phone" id="register-phone"
+                                placeholder="请输入手机号" autocomplete="off">
+                        </div>
+                        <div class="register-input input">
+                            <label for="register-code">验证码</label>
+                            <div class="register-code-pane">
+                                <input type="text" name="register-code" class="register-code" id="register-code"
+                                    placeholder="请输入验证码" autocomplete="off">
+                                <input type="button" value="获取验证码" class="register-code-button"
+                                    id="register-code-button">
+                            </div>
+                        </div>
+
+                        <input type="submit" value="注册" class="register-button" id="register-button">
+                    </form>
+                </div>
+
+                <div class="forget-box">
+                    <form class="forget-form">
+                        <div class="forget-input input">
+                            <label for="forget-username">用户名</label>
+                            <input type="text" name="forget-username" class="forget-username" id="forget-username"
+                                placeholder="请输入要重置的用户名" autocomplete="off">
+                        </div>
+                        <div class="forget-input input">
+                            <label for="forget-password">密码</label>
+                            <input type="password" name="forget-password" class="forget-password" id="forget-password"
+                                placeholder="请输入新密码" autocomplete="off">
+                        </div>
+                        <div class="forget-input input">
+                            <label for="forget-phone">手机号</label>
+                            <input type="text" name="forget-phone" class="forget-phone" id="forget-phone"
+                                placeholder="请输入注册的手机号" autocomplete="off">
+                        </div>
+                        
+                        <div class="forget-input input">
+                            <label for="forget-code">验证码</label>
+                            <div class="forget-code-pane">
+                                <input type="text" name="forget-code" class="forget-code" id="forget-code"
+                                    placeholder="请输入验证码" autocomplete="off">
+                                <input type="button" value="获取验证码" class="forget-code-button" id="forget-code-button">
+                            </div>
+                        </div>
+
+                        <input type="submit" value="重置密码" class="reset-button" id="reset-button">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/index.js"></script>
+<script src="assets/js/login.js"></script>
+<script src="assets/js/register.js"></script>
+<script src="assets/js/forget.js"></script>
+
+</html>

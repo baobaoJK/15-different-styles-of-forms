@@ -1,0 +1,223 @@
+$mainColor: #CD1348;
+$transitionTime: 0.5s;
+
+@keyframes background-animation {
+    0% {
+        filter: blur(0px);
+    }
+
+    100% {
+        filter: blur(2px);
+    }
+}
+
+@keyframes login-form {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+html,
+body,
+.main {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    min-width: 1600px;
+    min-height: 800px;
+}
+
+.main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    .background {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: transparent url("../images/background.jpg") no-repeat scroll center;
+        background-size: cover;
+        transform: scale(1.1);
+        filter: blur(2px);
+        animation: background-animation 1s;
+    }
+}
+
+// 表单盒子样式
+.form-box {
+    display: flex;
+    position: relative;
+    width: 1450px;
+    height: 650px;
+    background-color: white;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+    animation: login-form 2s;
+
+    // 表单盒子块样式
+    .form-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 350px;
+        height: 100%;
+
+        // 表单盒子顶部样式
+        .form-top {
+            display: flex;
+            position: absolute;
+            top: 80px;
+            width: 125px;
+            height: 48px;
+            margin-bottom: 32px;
+            z-index: 1;
+
+            button {
+                width: 100%;
+                height: 100%;
+                border: none;
+                border-bottom: 1px solid $mainColor;
+                background-color: transparent;
+                font-size: 20px;
+                cursor: pointer;
+
+                &.active {
+                    color: $mainColor;
+                    border-bottom: 2px solid $mainColor;
+                }
+            }
+        }
+
+        // 链接样式
+        .link {
+            position: absolute;
+            bottom: 50px;
+            width: 256px;
+            font-size: 14px;
+            text-align: left;
+
+            a {
+                outline: none;
+                text-decoration: none;
+                color: $mainColor;
+                transition: opacity .3s;
+
+                &:hover {
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+
+    // 表单盒子背景
+    .form-background {
+        width: 1100px;
+        height: 100%;
+        background: white url("../images/background.jpg ") no-repeat scroll center;
+        background-size: cover;
+    }
+
+}
+
+// 重置密码盒子样式
+.forget-box {
+    display: flex;
+    position: relative;
+    width: 100%;
+
+    // 重置密码表单样式
+    .forget-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+
+        // 输入框样式
+        input {
+            width: 250px;
+            height: 32px;
+            margin-bottom: 16px;
+            outline: none;
+            border: rgb(242, 242, 242) solid 1px;
+            background-color: rgb(242, 242, 242);
+            border-radius: 2px;
+            text-align: center;
+            transition: border .3s;
+
+            &:focus {
+                border: $mainColor solid 1px;
+            }
+        }
+
+        // 验证码块样式
+        .forget-code-pane {
+            display: flex;
+            width: 256px;
+            height: 32px;
+            padding: 1px 0;
+            margin-bottom: 16px;
+            border: rgb(242, 242, 242) solid 1px;
+            background-color: rgb(242, 242, 242);
+            border-radius: 2px;
+            transition: border .3s;
+
+            &:focus-within {
+                border: $mainColor solid 1px;
+            }
+
+            // 验证码输入框样式
+            .forget-code {
+                width: 60%;
+                border: none;
+                background-color: transparent;
+            }
+
+            // 验证码发送按钮样式
+            .forget-code-button {
+                width: 40%;
+                border: none;
+                background-color: transparent;
+                transition: color .3s;
+                cursor: pointer;
+
+                &:hover {
+                    color: $mainColor;
+                }
+
+                &:disabled {
+                    color: $mainColor;
+                }
+            }
+        }
+
+        // 重置密码按钮样式
+        .reset-button {
+            width: 256px;
+            height: 36px;
+            border: $mainColor solid 1px;
+            background-color: $mainColor;
+            color: white;
+            transition: opacity .3s;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+    }
+}

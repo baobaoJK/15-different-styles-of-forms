@@ -1,0 +1,139 @@
+$mainColor: #2f80e2;
+$transitionTime: 0.5s;
+
+// 注册盒子样式
+.register-box {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: calc(450px - 48px);
+    height: calc(600px - 48px);
+    background-color: white;
+    border-radius: 8px;
+    padding: 24px;
+    z-index: 2;
+
+    // 注册盒子顶部
+    .register-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        top: 24px;
+        width: calc(100% - 48px);
+
+        // 注册标题样式
+        .register-title {
+            font-weight: 100;
+            font-size: 32px;
+            color: black;
+            margin: 0;
+        }
+
+        // 关闭按钮样式
+        .close {
+            font-size: 32px;
+            width: 32px;
+            height: 32px;
+            line-height: 32px;
+            padding: 0;
+            border: none;
+            background-color: transparent;
+            transition: opacity $transitionTime;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+    }
+
+    // 注册表单样式
+    .register-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding-top: 100px;
+
+        :nth-child(n) {
+            margin-bottom: 16px;
+        }
+
+        // 标题样式
+        .register-title {
+            font-weight: 100;
+            font-size: 24px;
+        }
+
+        // 输入框样式
+        input {
+            width: calc(100% - 40px);
+            height: 50px;
+            padding: 0px 20px;
+            color: black;
+            font-size: 20px;
+            background-color: #ededed;
+            border: 1px solid rgba($color: #FFF, $alpha: 0);
+            border-radius: 6px;
+            transition: border $transitionTime;
+
+            &:focus {
+                border: 1px solid $mainColor;
+            }
+        }
+
+        // 获取验证码块样式
+        .register-code-pane {
+            display: flex;
+            position: relative;
+            width: 100%;
+
+            // 验证码输入框样式
+            .register-code {
+                width: 100%;
+                padding-right: 130px;
+            }
+
+            // 验证码按钮样式
+            .register-code-button {
+                display: block;
+                position: absolute;
+                right: 0px;
+                width: 120px;
+                padding: 0;
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+                transition: color $transitionTime;
+
+                &:hover {
+                    color: $mainColor;
+                }
+
+                &:disabled {
+                    color: rgb(200, 200, 200);
+                    cursor: not-allowed;
+                }
+            }
+        }
+
+        // 注册按钮样式
+        .register-button {
+            padding: 0;
+            width: 100%;
+            color: white;
+            background-color: $mainColor;
+            border: 1px solid $mainColor;
+            cursor: pointer;
+            transition: opacity $transitionTime;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}

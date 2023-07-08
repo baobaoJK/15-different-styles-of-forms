@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>渐变风格表单注册页面</title>
+    <link rel="stylesheet" href="assets/css/register.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="register-box">
+
+            <div class="left-box">
+                <div class="center-block">
+                    <div class="text">
+                        <h2>今日分享</h2>
+                        <p>如果，樱花掉落的速度是每秒5厘米。</p>
+                        <p>那么两颗心需要多久才能靠近？</p>
+                        <p>我要用什么样的速度，才能与你相遇？</p>
+                        <p>——《秒速五厘米》</p>
+                        <p>&nbsp;</p>
+                        <p>既然已经出手帮助了，那就帮到底。</p>
+                        <p>——《千与千寻》</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-box">
+                <form class="register-form">
+                    <div class="register-title">
+                        <h2>欢迎，注册！</h2>
+                        <span>输入用户信息进行注册</span>
+                    </div>
+                    <div class="register-input">
+                        <label for="username">用户名</label>
+                        <input type="text" class="input username" id="username" autocomplete="off">
+                        <label for="password">密码</label>
+                        <input type="password" class="input password" id="password" autocomplete="off">
+                        <label for="phone">手机号</label>
+                        <input type="text" class="input phone" id="phone" autocomplete="off">
+                        <div class="code-pane">
+                            <label for="code">验证码</label>
+                            <input type="text" class="input code" id="code" autocomplete="off">
+                            <input type="button" value="获取验证码" class="code-button" id="code-button">
+                        </div>
+                        <input type="button" value="注册" class="register-button" id="register-button"></input>
+                        <div class="options">
+                            <a href="login.html" class="login">登录</a>
+                            <a href="forget.html" class="forget">忘记密码？</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/register.js"></script>
+
+</html>

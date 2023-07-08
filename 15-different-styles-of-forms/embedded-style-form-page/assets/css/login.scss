@@ -1,0 +1,116 @@
+$mainColor: #0dc900;
+$transitionTime: 0.5s;
+
+* {
+    outline: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+html,
+body,
+.main {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: gainsboro;
+}
+
+// 登录盒子样式
+.login-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    height: 600px;
+
+    // 登录标题样式
+    .login-title {
+        font-weight: 100;
+        font-size: 42px;
+        color: black;
+        letter-spacing: 1rem;
+        margin-right: -1rem;
+    }
+
+    // 登录表单样式
+    .login-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 400px;
+
+        :nth-child(n) {
+            margin-bottom: 24px;
+        }
+
+        // 输入框样式
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            height: 50px;
+            padding: 0px 10px;
+            font-size: 20px;
+            border: 1px solid #F0F0F0;
+            border-radius: 6px;
+            transition: border $transitionTime;
+
+            &:focus {
+                border: 1px solid $mainColor;
+            }
+        }
+
+        // 登录选项样式
+        .login-options {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 0;
+
+            .autologin {
+                vertical-align: middle;
+                width: 16px;
+                height: 16px;
+                margin: 0;
+            }
+        }
+
+        // 登录按钮样式
+        .login-button {
+            width: calc(100% + 20px);
+            height: 50px;
+            color: white;
+            font-size: 20px;
+            background-color: $mainColor;
+            border: 1px solid $mainColor;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: opacity $transitionTime;
+
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+
+        // 链接样式
+        a {
+            transition: color $transitionTime;
+
+            &:hover {
+                color: rgb(0, 132, 255);
+            }
+        }
+    }
+}

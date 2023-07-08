@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>极简风格表单登录页</title>
+    <link rel="stylesheet" href="assets/css/login.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="login-box">
+            <h1 class="login-title">登录</h1>
+            <form class="login-form">
+                <div class="username-box">
+                    <label for="username">用户名</label>
+                    <input type="text" name="username" class="username" id="username" placeholder="请输入用户名"
+                        autocomplete="off">
+                </div>
+                <div class="password-box">
+                    <label for="password">密码</label>
+                    <input type="password" name="password" class="password" id="password" placeholder="请输入密码"
+                        autocomplete="off">
+                </div>
+                <div class="link">
+                    <a href="forget.html" class="forget">忘记密码？</a>
+                </div>
+                <input type="submit" value="登录" class="login-button" id="login-button">
+            </form>
+            <div class="another-login">
+                <p>其他方式登录</p>
+                <div class="another-link">
+                    <a href="#qq">
+                        <img src="assets/images/qq.png" alt="qq.png">
+                    </a>
+                    <a href="#wechat">
+                        <img src="assets/images/wechat.png" alt="wechat.png">
+                    </a>
+                </div>
+            </div>
+            <a href="register.html" class="register">立即注册</a>
+        </div>
+    </div>
+</body>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/login.js"></script>
+
+</html>

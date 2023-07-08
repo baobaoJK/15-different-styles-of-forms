@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>左右选项卡风格表单页面</title>
+    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/register.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="background"></div>
+
+        <div class="form-box">
+            <div class="form-block">
+                <div class="form-top">
+                    <button class="login active">密码登录</button>
+                    <button class="register">注册账号</button>
+                </div>
+
+                <div class="login-box">
+                    <form class="login-form">
+                        <input type="text" name="login-username" id="login-username" class="login-username" placeholder="用户名"
+                            autocomplete="off">
+                        <input type="password" name="login-password" id="login-password" class="login-password" placeholder="密码"
+                            autocomplete="off">
+                        <input type="submit" value="登录" class="login-button">
+                    </form>
+                </div>
+                <div class="register-box">
+                    <div class="register-background"></div>
+                    <form class="register-form">
+                        <input type="text" name="register-username" id="register-username" class="register-username" placeholder="请输入用户名"
+                            autocomplete="off">
+                        <input type="password" name="register-password" id="register-password" class="register-password" placeholder="请输入密码"
+                            autocomplete="off">
+                        <input type="text" class="register-phone" placeholder="请输入手机号" autocomplete="off">
+                        <div class="register-code-pane">
+                            <input type="text" class="register-code" placeholder="请输入验证码" autocomplete="off">
+                            <input type="button" class="register-code-button" value="获取验证码"></input>
+                        </div>
+                        <input type="submit" value="注册" class="register-button">
+                    </form>
+                </div>
+                <div class="link">
+                    <p>无法登陆？<a href="forget.html" class="forget">点我</a></p>
+                </div>
+            </div>
+
+            <div class="form-background"></div>
+
+        </div>
+
+    </div>
+</body>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/index.js"></script>
+<script src="assets/js/login.js"></script>
+<script src="assets/js/register.js"></script>
+
+</html>

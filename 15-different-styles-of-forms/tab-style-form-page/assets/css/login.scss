@@ -1,0 +1,133 @@
+$mainColor: #4765FB;
+$transitionTime: 0.5s;
+
+* {
+    outline: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+html,
+body,
+.main {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, #f3e6fe 0%, #d6dff8 100%);
+}
+
+// 表单盒子样式
+.form-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+    height: 700px;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+
+    // 表单盒子顶部样式
+    .form-top {
+        display: flex;
+        width: 100%;
+        height: 82px;
+        background-color: black;
+
+        button {
+            width: 33.34%;
+            height: 100%;
+            font-weight: 100;
+            font-size: 32px;
+            border: none;
+            transition: opacity $transitionTime;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.8;
+            }
+
+            &.active {
+                color: white;
+                background-color: #fd7d92;
+            }
+        }
+    }
+
+    // 表单块样式
+    .form-block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+// 登录盒子样式
+.login-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    // 登录表单样式
+    .login-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 600px;
+
+        :nth-child(n) {
+            margin-bottom: 24px;
+        }
+
+        .input {
+            display: flex;
+            flex-direction: column;
+            width: 70%;
+        }
+
+        // 输入框样式
+        input {
+            width: calc(100% - 20px);
+            height: 50px;
+            padding: 0px 10px;
+            font-size: 20px;
+            border: 1px solid gainsboro;
+            border-radius: 6px;
+            transition: border $transitionTime;
+
+            &:focus {
+                border: 1px solid $mainColor;
+            }
+        }
+
+        // 登录按钮样式
+        .login-button {
+            padding: 0;
+            width: 70%;
+            color: white;
+            background-color: $mainColor;
+            border: 1px solid $mainColor;
+            cursor: pointer;
+            transition: opacity $transitionTime;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}

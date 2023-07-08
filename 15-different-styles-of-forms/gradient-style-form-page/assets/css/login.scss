@@ -1,0 +1,331 @@
+$transitionTime: 0.5s;
+
+@keyframes anime {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+* {
+    outline: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+html,
+body,
+.main {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: rgb(246, 250, 255);
+}
+
+// 登录盒子样式
+.login-box {
+    display: flex;
+    width: 1400px;
+    height: 700px;
+    border-radius: 16px;
+    overflow: hidden;
+
+    // 左盒子样式
+    .left-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 50%;
+        height: 100%;
+        background-color: rgb(172, 198, 248);
+        background-image: linear-gradient(-225deg, #2cd8d5 0%, #c5c1ff 50%, #ffbac3 100%);
+        background-size: 600%;
+        animation: anime 20s linear infinite;
+
+        // 背景块样式
+        .center-block {
+            width: 70%;
+            height: 70%;
+            background-color: rgba(255, 255, 255, 0.35);
+            backdrop-filter: blur(13.5px);
+
+            // 文本样式
+            .text {
+                color: #fff;
+                margin: 28px;
+                position: relative;
+                font-size: 24px;
+                font-weight: 100;
+            }
+        }
+    }
+
+    // 右盒子样式
+    .right-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 50%;
+        height: 100%;
+        background-color: #fff;
+
+        // 登录表单样式
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            width: 70%;
+
+            // 登录标题样式
+            .login-title {
+                margin-bottom: 30px;
+
+                h2 {
+                    display: inline;
+                    font-weight: 600;
+                    font-size: 40px;
+                }
+
+                span {
+                    display: block;
+                    color: rgb(136, 135, 154);
+                    margin-top: 10px;
+                }
+            }
+
+            // 登录输入框样式
+            .login-input {
+
+                // 登录标签样式
+                label {
+                    font-weight: 600;
+                    color: rgb(41, 40, 78);
+                }
+
+                // 输入框样式
+                .input {
+                    display: block;
+                    margin: 10px 0;
+                    width: 100%;
+                    height: 50px;
+                    border: 1px solid rgb(201, 200, 207);
+                    border-radius: 8px;
+                    padding: 10px;
+                    box-sizing: border-box;
+                    outline: none;
+                    font-size: 20px;
+                    font-weight: 200;
+
+                    &:hover,
+                    &:focus {
+                        border: 1px solid rgb(155, 181, 247);
+                    }
+                }
+
+                // 选项框样式
+                .options {
+
+                    // 复选框样式
+                    #remember[type="checkbox"] {
+                        position: relative;
+                        width: 16px;
+                        height: 16px;
+                        vertical-align: middle;
+                        cursor: pointer;
+
+                        &::after {
+                            content: "";
+                            display: inline-block;
+                            position: absolute;
+                            top: 0;
+                            width: 16px;
+                            height: 16px;
+                            color: #000;
+                            text-align: center;
+                            padding-left: 0px;
+                            border-radius: 3px;
+                        }
+
+                        &:checked::after {
+                            content: "✓";
+                            color: #fff;
+                            font-size: 12px;
+                            line-height: 16px;
+                            font-weight: bold;
+                            border: 0;
+                            background: linear-gradient(to right,
+                                    rgb(93, 172, 250) 0%,
+                                    rgb(95, 139, 250) 40%,
+                                    rgb(97, 96, 251) 70%,
+                                    rgb(154, 140, 252) 100%);
+                        }
+
+                    }
+
+                    // 复选框文本
+                    .remember-me {
+                        color: rgb(41, 40, 78);
+                        font-weight: 600;
+                        vertical-align: middle;
+                        cursor: pointer;
+                    }
+
+                    // 忘记密码文本
+                    .forget {
+                        float: right;
+                        background-image: linear-gradient(to right,
+                                rgb(93, 172, 250) 0%,
+                                rgb(95, 139, 250) 40%,
+                                rgb(97, 96, 251) 70%,
+                                rgb(154, 140, 252) 100%);
+                        background-clip: text;
+                        color: transparent;
+                        margin-top: 1px;
+                        transition: opacity $transitionTime;
+                        cursor: pointer;
+
+                        &:hover {
+                            opacity: 0.5;
+                        }
+                    }
+                }
+
+                // 登录按钮
+                .login-button {
+                    width: 100%;
+                    height: 60px;
+                    color: #fff;
+                    background: linear-gradient(to right,
+                            rgb(93, 172, 250) 0%,
+                            rgb(95, 139, 250) 40%,
+                            rgb(97, 96, 251) 70%,
+                            rgb(154, 140, 252) 100%);
+                    border-radius: 10px;
+                    border: 0;
+                    margin-top: 20px;
+                    font-size: 20px;
+                    transition: opacity $transitionTime;
+                    cursor: pointer;
+
+                    &:hover {
+                        opacity: 0.5;
+                    }
+                }
+            }
+
+            // 分隔条样式
+            .divider {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                margin: 20px 0;
+                text-align: center;
+
+                // 分隔条样式
+                .line {
+                    display: inline-block;
+                    max-width: 45%;
+                    width: 45%;
+                    flex: 1;
+                    height: 1px;
+                    background-color: rgb(201, 202, 209);
+                }
+
+                // 分隔条文本 
+                .divider-text {
+                    display: inline-block;
+                    width: 50px;
+                    vertical-align: middle;
+                    margin: 0px 20px;
+                    line-height: 0px;
+                    color: rgb(201, 202, 209);
+                }
+            }
+
+            // 其他登录样式
+            .other-login-wrapper {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                margin-bottom: 16px;
+
+                .other-login-item {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: calc(100% - 20px);
+                    padding: 10px;
+                    text-align: center;
+                    border-radius: 10px;
+                    font-weight: 600;
+                    // color: rgb(51, 49, 116);
+                    // border: 1px solid rgb(214, 222, 228);
+                    margin-bottom: 16px;
+                    transition: opacity $transitionTime;
+                    cursor: pointer;
+
+                    img {
+                        position: relative;
+                        width: 32px;
+                        height: 32px;
+                        margin-right: 8px;
+                    }
+
+                    &:nth-child(1) {
+                        color: white;
+                        background-color: rgb(0, 149, 255);
+                    }
+
+                    &:nth-child(2) {
+                        color: white;
+                        background-color: rgb(45, 232, 32);
+                    }
+
+                    &:hover {
+                        opacity: 0.5;
+                    }
+                }
+            }
+
+            // 注册链接样式
+            .register {
+                text-align: center;
+                background-image: linear-gradient(to right,
+                        rgb(93, 172, 250) 0%,
+                        rgb(95, 139, 250) 40%,
+                        rgb(97, 96, 251) 70%,
+                        rgb(154, 140, 252) 100%);
+                background-clip: text;
+                color: transparent;
+                transition: opacity $transitionTime;
+                cursor: pointer;
+
+                &:hover {
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+}

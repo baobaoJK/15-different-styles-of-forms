@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模糊背景风格表单注册页</title>
+    <link rel="stylesheet" href="assets/css/register.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="register-box">
+            <div class="left-box">
+                <h1 class="register-title">用户注册</h1>
+                <p class="register-sub-title">人总是活在矛盾当中，对人类的绝望以及信赖，我们在这夹缝间求生存。——《虞美人盛开的山坡》</p>
+            </div>
+            <div class="right-box">
+                <form class="register-form">
+                    <input type="text" name="username" class="username" id="username" placeholder="请输入用户名"
+                        autocomplete="off">
+                    <input type="password" name="password" class="password" id="password" placeholder="请输入密码"
+                        autocomplete="off">
+                    <input type="text" name="phone" class="phone" id="phone" placeholder="请输入手机号" autocomplete="off">
+                    <div class="code-pane">
+                        <input type="text" name="code" class="code" id="code" placeholder="请输入验证码" autocomplete="off">
+                        <input type="button" value="获取验证码" class="code-button" id="code-button">
+                    </div>
+                    <input type="submit" value="注册" class="register-button" id="register-button">
+                    <div class="link">
+                        <p>已有账号？<a href="login.html" class="login">登录</a></p>
+                        <p>忘记密码？<a href="forget.html" class="forget">点我</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/register.js"></script>
+
+</html>
